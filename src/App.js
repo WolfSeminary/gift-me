@@ -4,7 +4,6 @@ import  MultiActionAreaCard from'./GiftDetailed/GiftDetailed';
 function App() {
   return (
     <div className="App">
-     < MultiActionAreaCard/>
     </div>
   );
 }

@@ -6,7 +6,6 @@ import FindGift from './FindGift';
 function App() {
   return (
     <div className="App">
-      <FindGift />
     </div>
   );
 }

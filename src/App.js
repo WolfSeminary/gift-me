@@ -1,13 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import Navigate from './Navigation';
+import Navigation from './Navigation';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   
   return (
     <div className="App">
       
-      <Navigate/>
+      <Navigation/>
     </div>
   );
 }

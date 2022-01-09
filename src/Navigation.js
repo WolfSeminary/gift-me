@@ -1,8 +1,7 @@
 
-import React, { FC } from 'react';
+import React from 'react';
 import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
-//import Link from '@mui/material/Link';
 import { Route,Routes ,Link} from "react-router-dom";
 import Categories from './Categories';
 import Gifts from './Gifts';
@@ -21,16 +20,5 @@ return(
     <Route path="gifts" element={<Gifts/>}/>
   </Routes>
 </Breadcrumbs>
-
-
-//<Breadcrumbs aria-label="breadcrumb">
-  //<Link underline="hover" color="inherit" href="./Categories">
- // categories
- // </Link>
-  //<Link underline="hover" color="inherit" href="./Gifts">
-  //gifts
- // </Link>
- // <Typography color="text.primary">gift{/*Replace with the gift name*/}</Typography>
-//</Breadcrumbs>
 )}
 export default Navigation;

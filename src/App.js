@@ -1,6 +1,5 @@
 import './App.css';
 import logo from './logo.svg';
-import GiftNote from './GiftNote';
 
 function App() {
   return (
@@ -10,8 +9,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload. Deploy-work!!
         </p>
-      </header>    <GiftNote/>
-
+      </header>    
     </div>
   );
 }

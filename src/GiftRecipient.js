@@ -4,7 +4,6 @@ import TextField from '@mui/material/TextField'
 
 const GiftRecipient = () => {
     return (
-        <div>
             <Box
                 component="form"
                 sx={{
@@ -15,8 +14,6 @@ const GiftRecipient = () => {
             >
                 <TextField id="outlined-basic" label="Recipient Name" variant="outlined" />
             </Box>
-
-        </div>
     )
 }
 

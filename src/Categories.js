@@ -23,8 +23,6 @@ const Categories = () => {
                            <Category category={item}/>
                         </Grid>)
                 }
-
-
             </Grid>
         </Box>
     </>);

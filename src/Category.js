@@ -5,7 +5,6 @@ import { CardContent, Typography, CardMedia,Card } from '@mui/material';
 
 const Category=({category})=> {
     return (
-
         <Card>
             <CardMedia
                 component="img"
@@ -19,7 +18,6 @@ const Category=({category})=> {
                 </Typography>
             </CardContent>
         </Card>
-
     )
 }
 export default Category;

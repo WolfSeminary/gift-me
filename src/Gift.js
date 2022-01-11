@@ -13,7 +13,7 @@ const Gift=()=> {
           component="img"
           height="200"
           image="./SSGP0149.JPG"
-          alt="PICTUR"
+          alt="picture"
         />
         <CardContent >
             <div></div>

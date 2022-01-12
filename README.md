@@ -23,3 +23,9 @@ Clicking a gifts redirects to the **Gift** page
 ### Gift Page:👇
 
 ![image](https://user-images.githubusercontent.com/39950157/148425661-dba7903f-91a2-4678-b16d-46435a882b82.png)
+
+Choosing the gift redirects to the **Buy Gift** page 
+
+### Buy Gift Page:👇
+
+![image](https://user-images.githubusercontent.com/39950157/149077005-f4353573-5325-44f2-b983-c6a3bf702c0d.png)

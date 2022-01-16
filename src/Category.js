@@ -1,8 +1,6 @@
 import React from 'react';
 import { CardContent, Typography, CardMedia,Card } from '@mui/material';
 
-
-
 const Category=({category})=> {
     return (
         <Card>
@@ -20,4 +18,5 @@ const Category=({category})=> {
         </Card>
     )
 }
+
 export default Category;

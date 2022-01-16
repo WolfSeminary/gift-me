@@ -19,7 +19,7 @@ const Categories = () => {
             <Grid container spacing={2}>
                 {
                     categories.map((item) =>
-                        <Grid textAlign={'center'} item xs={6} md={6} >
+                        <Grid key={item.id} textAlign={'center'} item xs={6} md={6} >
                            <Category category={item}/>
                         </Grid>)
                 }

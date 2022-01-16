@@ -25,7 +25,7 @@ export default function GiftCategories() {
         console.log(x);
         <BrowserRouter>
         <Routes>
-    <Route path="/client/:clientId" component={Client} />
+    {/* <Route path="/client/:clientId" component={Client} /> */}
     {/* //       <Route path="/" element={<App />}>
     //         <Route index element={<Home />} />
     //         <Route path="food" element={<Food />}>

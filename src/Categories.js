@@ -3,8 +3,7 @@ import Category from './Category';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 
-const Categories = () => {
-    
+const Categories = () => {    
     const [categories, setCategories] = useState([
         {id:1,name:'Food',image:"./images/1.jpg"},
         {id:2,name:'Attractions',image:"./images/1.jpg"},
@@ -13,7 +12,7 @@ const Categories = () => {
         {id:5,name:'Food',image:"./images/1.jpg"},
         {id:6,name:'Gift Cards',image:"./images/1.jpg"},
     ]);
-
+    
     return (<>
         <Box sx={{ flexGrow: 1 ,margin:3}}>
             <Grid container spacing={2}>

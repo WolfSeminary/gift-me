@@ -1,9 +1,13 @@
-const GiftPage=()=>{
-    return(
+import AppBar from './AppBar';
+import Breadcrumbs from './Breadcrumbs';
+import GiftDetailed from './GiftDetailed';
+
+const GiftPage = () => {
+    return (
         <>
-        <AppBar/>
-        <Breadcrumbs/>
-        <GiftDetailed/>
+            <AppBar />
+            <Breadcrumbs />
+            <GiftDetailed />
         </>
     )
 }

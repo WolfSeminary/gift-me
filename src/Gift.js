@@ -1,28 +1,32 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
+import React from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
 
-const Gift = ({ gift }) => {
+const Gift = ({ myGift }) => {
+  console.log(myGift)
   return (
-    <Card sx={{ maxWidth: 345, margin: 2 }}>
-
+    <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
         height="200"
-        image={gift.giftImage}
-        alt={gift.giftName}
+        image={myGift.image}
+        alt="picture"
       />
-      <CardContent >
+      <CardContent>
         <div></div>
-        <Typography borderRadius="16%" sx={{ borderRadius: 16 }} gutterBottom variant="h5" component="div">
-          {gift.giftName}
+        <Typography
+          borderRadius="16%"
+          sx={{ borderRadius: 16 }}
+          gutterBottom
+          variant="h5"
+          component="div"
+        >
+          {myGift.name}
         </Typography>
       </CardContent>
-
     </Card>
   );
-}
-
+};
 export default Gift;

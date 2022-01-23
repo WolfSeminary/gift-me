@@ -14,7 +14,7 @@ export default function Gifts() {
     return (
         <Box sx={{ flexGrow: 1, margin: 3 }}>
             <Grid container spacing={2}>
-                {gifts.map((gift) => (
+                {gifts.filter(item => item.categoryID == categoryId || categoryId == null).map((gift) => (
                     <Grid gift xs={6} key={gift.id} textAlign={"center"} md={6}>
                         <Gift key={gift.id} myGift={gift} />
                     </Grid>

@@ -5,10 +5,14 @@ import Gift from "./Gift";
 
 export default function Gifts() {
     const [gifts, setGifts] = useState([
-        { id: 1, name: "gift1", image: "./SSGP0149.JPG" },
-        { id: 2, name: "gift2", image: "./SSGP0149.JPG" },
-        { id: 3, name: "Gift Card", image: "./SSGP0149.JPG" },
-        { id: 4, name: "gift3", image: "./SSGP0149.JPG" },
+        {GiftID:11,categoryID:1,name: 'Brunch',image:"./images/Brunch.jpg"},
+        {GiftID:12,categoryID:1,name: 'Lunch',image:"./images/Lunch.jpg"},
+        {GiftID:21,categoryID:2,name: 'Zoo',image:"./images/Zoo.jpg"},
+        {GiftID:22,categoryID:2,name: 'Museum',image:"./images/Museum.jpeg"},
+        {GiftID:31,categoryID:3,name: 'Ikea',image:"./images/Ikea.png"},
+        {GiftID:32,categoryID:3,name: 'Laline',image:"./images/Laline.png"},
+        {GiftID:41,categoryID:4,name: 'Playmobil',image:"./images/Playmobil.gif"},
+        {GiftID:42,categoryID:4,name: 'Lego',image:"./images/Lego.jpg"}
     ]);
     console.log(gifts)
     return (

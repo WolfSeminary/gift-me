@@ -5,7 +5,7 @@ import Categories from './Categories';
 const CategoriesPage = () => {
    return (
     <>
-    <AppBar>Gift-me</AppBar>
+    <AppBar/>
     <Categories/>
     </>
    )

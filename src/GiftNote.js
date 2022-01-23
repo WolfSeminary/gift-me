@@ -2,8 +2,8 @@ import React from 'react'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
-const GiftNote=()=>{
-  return(<>  
+const GiftNote = ({ giftNote }) => {
+  return (<>
 
     <Box
       component="form"
@@ -13,8 +13,8 @@ const GiftNote=()=>{
       noValidate
       autoComplete="off"
     >
-  <TextField id="outlined-basic" label="Gift Note" variant="outlined" multiline rows={5} style={{width:600}} fullWidth/> 
-  </Box>
-</>)
+      <TextField id="outlined-basic" label="Gift Note" variant="outlined" value={giftNote} multiline rows={5} style={{ width: 600 }} fullWidth />
+    </Box>
+  </>)
 }
 export default GiftNote

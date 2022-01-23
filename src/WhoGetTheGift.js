@@ -3,15 +3,15 @@ import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import Typography from '@mui/material/Typography';
 
-const WhoGetTheGift = () => {
+const WhoGetTheGift = ({ whoGetTheGift }) => {
     return (
         <>
             <Typography variant="h5">Who gets the gift?</Typography>
             <ToggleButtonGroup >
-                <ToggleButton value="To someone else" >
-                    To someone else
+                <ToggleButton value={whoGetTheGift} >
+                    A Friend
                 </ToggleButton>
-                <ToggleButton value="To myself" >
+                <ToggleButton value={whoGetTheGift} >
                     To myself
                 </ToggleButton>
             </ToggleButtonGroup>

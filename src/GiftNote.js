@@ -1,20 +1,37 @@
-import React from 'react'
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
+import React, { useState } from "react";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 
-const GiftNote=()=>{
-  return(<>  
-
-    <Box
-      component="form"
-      sx={{
-        '& > :not(style)': { m: 1, width: '25ch' },
-      }}
-      noValidate
-      autoComplete="off"
-    >
-  <TextField id="outlined-basic" label="Gift Note" variant="outlined" multiline rows={5} style={{width:600}} fullWidth/> 
-  </Box>
-</>)
-}
-export default GiftNote
+const GiftNote = () => {
+  const [onChange, setOnChange] = useState();
+  const updateValue = (event) => {
+    setOnChange(event.target.value);
+  };
+  return (
+    <>
+      <Box
+        component="form"
+        sx={{
+          "& > :not(style)": { m: 1, width: "25ch" },
+        }}
+        noValidate
+        autoComplete="off"
+      >
+        <TextField
+          onChange={(e) => {
+            updateValue(e);
+            console.log(onChange);
+          }}
+          id="outlined-basic"
+          label="Gift Note"
+          variant="outlined"
+          multiline
+          rows={5}
+          style={{ width: 600 }}
+          fullWidth
+        />
+      </Box>
+    </>
+  );
+};
+export default GiftNote;

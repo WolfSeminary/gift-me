@@ -4,14 +4,13 @@ import Gift from './Gift';
 
 const Gifts = () => {
     const [gifts, setGifts] = useState([]);
-    let { id } = useParams();
-    let categoryId = id;
+    let { categoryId } = useParams();
 
     return (
         <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
             {
                 gifts.filter(item => item.categoryID == categoryId || categoryId == null)
-                    .map(g => <Gift key={g.id} gift={g} />)
+                    .map(item => <Gift key={item.id} gift={item} />)
             }
         </div>
     );

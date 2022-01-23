@@ -4,7 +4,7 @@ import Gift from './Gift';
 
 const Gifts = () => {
     const [gifts, setGifts] = useState([]);
-    let { categoryId } = useParams();
+    let { id: categoryId } = useParams();
 
     return (
         <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>

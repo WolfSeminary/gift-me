@@ -5,8 +5,17 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActions } from "@mui/material";
 import CardHeader from "@mui/material/CardHeader";
-import "./GiftDetailed.css";
+import "./Giftdetailed.css";
+import { useNavigate } from 'react-router-dom'
+import { Route, Routes } from "react-router-dom";
+import BuyGift from '../BuyGift'
+
 export default function GiftDetailed() {
+  const navigate = useNavigate();
+
+  const navigateBuyGift = () => {
+    navigate(`buygift`)
+  }
   return (
     <>
       <Card sx={{ width: 250, height: 280, position: "relative" }}>
@@ -53,7 +62,10 @@ export default function GiftDetailed() {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button variant="contained" className="button" fullWidth>
+            <Routes>
+              <Route path="buygift" element={<BuyGift />} />
+            </Routes>
+            <Button onClick={navigateBuyGift} variant="contained" className="button" fullWidth>
               choose
             </Button>
           </CardActions>

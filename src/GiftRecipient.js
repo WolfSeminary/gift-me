@@ -20,10 +20,7 @@ const GiftRecipient = () => {
         id="outlined-basic"
         label="Recipient Name"
         variant="outlined"
-        onChange={(e) => {
-          updateValue(e);
-          console.log(onChange);
-        }}
+        onChange={updateValue}
       />
     </Box>
   );

@@ -19,10 +19,7 @@ const GiftSender = () => {
       >
         <TextField
           id="outlined-basic"
-          onChange={(e) => {
-            updateValue(e);
-            console.log(onChange);
-          }}
+          onChange={updateValue}
           label="Sender Name"
           variant="outlined"
         />

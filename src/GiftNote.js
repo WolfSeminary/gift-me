@@ -18,10 +18,7 @@ const GiftNote = () => {
         autoComplete="off"
       >
         <TextField
-          onChange={(e) => {
-            updateValue(e);
-            console.log(onChange);
-          }}
+          onChange={updateValue}
           id="outlined-basic"
           label="Gift Note"
           variant="outlined"

@@ -12,10 +12,7 @@ const WhoGetTheGift = () => {
     <>
       <Typography variant="h5">Who gets the gift?</Typography>
       <ToggleButtonGroup
-        onChange={(e) => {
-          setOnChange(e.target.value);
-          console.log(onChange);
-        }}
+          onChange={updateValue}
       >
         <ToggleButton value="To someone else">To someone else</ToggleButton>
         <ToggleButton value="To myself">To myself</ToggleButton>

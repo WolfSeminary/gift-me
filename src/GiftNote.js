@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 
-const GiftNote = () => {
-  const [onChange, setOnChange] = useState();
+const GiftNote = ({ onChange, value }) => {
+  const [onChange1, setOnChange] = useState();
   const updateValue = (event) => {
     setOnChange(event.target.value);
+    console.log(onChange1);
   };
   return (
     <>
@@ -18,6 +19,8 @@ const GiftNote = () => {
         autoComplete="off"
       >
         <TextField
+          value={value}
+          onChange={onChange}
           onChange={updateValue}
           id="outlined-basic"
           label="Gift Note"

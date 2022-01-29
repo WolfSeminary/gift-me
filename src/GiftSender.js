@@ -2,7 +2,7 @@ import React from 'react'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
-const GiftSender = () => {
+const GiftSender = ({ giftSender }) => {
     return (<>
         <Box
             component="form"
@@ -12,8 +12,8 @@ const GiftSender = () => {
             noValidate
             autoComplete="off"
         >
-            <TextField id="outlined-basic" label="Sender Name" variant="outlined" />
+            <TextField id="outlined-basic" label="Sender Name" value={giftSender} variant="outlined" />
         </Box>
     </>)
 }
-export default GiftSender
+export default GiftSender;

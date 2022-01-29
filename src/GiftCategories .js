@@ -10,7 +10,7 @@ import {
 } from "react-router-dom";
 
 export default function GiftCategories() {
-    const [categoria, setCategoria] = React.useState('');
+    const [selectedCategory, setSelectedCategory] = React.useState('');
     const [categories, setCategories] = React.useState([
         { id: 1, name: 'Food' },
         { id: 2, name: 'Attractions' },
@@ -20,8 +20,8 @@ export default function GiftCategories() {
         { id: 6, name: 'Gift Cards' },
     ]);
     let navigate = useNavigate();
-    const handleChange = (event) => {
-        setCategoria(event.target.value);
+    const onSelectedCategoryChange = (event) => {
+        setSelectedCategory(event.target.value);
 
     };
     function onCategoryClick(id) {
@@ -35,7 +35,7 @@ export default function GiftCategories() {
             <FormControl sx={{ m: 1, minWidth: 120 }}>
                 <Select
                     value={categoria}
-                    onChange={handleChange}
+                    onChange={onSelectedCategoryChange}
                     displayEmpty
                     inputProps={{ 'aria-label': 'Without label' }}
                 >

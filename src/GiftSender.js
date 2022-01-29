@@ -1,12 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 
-const GiftSender = () => {
-  const [onChange, setOnChange] = useState();
-  const updateValue = (event) => {
-    setOnChange(event.target.value);
-  };
+const GiftSender = ({ onChange, value }) => {
   return (
     <>
       <Box
@@ -19,7 +15,8 @@ const GiftSender = () => {
       >
         <TextField
           id="outlined-basic"
-          onChange={updateValue}
+          value={value}
+          onChange={onChange}
           label="Sender Name"
           variant="outlined"
         />

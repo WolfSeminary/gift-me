@@ -1,5 +1,3 @@
-// import { MenuItem, Select, FormControl, InputLabel } from "@mui/material";
-
 import * as React from 'react';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -8,15 +6,14 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Gift from './Gift';
 import {
-
     Routes,
     Route,
     useNavigate
 } from "react-router-dom";
-
 export default function GiftCategories() {
     const [categoria, setCategoria] = React.useState('');
-    const [categories, setCategories] = React.useState([
+    const [selectedCategory, setSelectedCategory] = React.useState('');
+   const [categories, setCategories] = React.useState([
         { id: 1, name: 'Food' },
         { id: 2, name: 'Attractions' },
         { id: 3, name: 'Gift Cards' },
@@ -27,16 +24,14 @@ export default function GiftCategories() {
     let navigate = useNavigate();
     const handleChange = (event) => {
         setCategoria(event.target.value);
-
+    const onSelectedCategoryChange = (event) => {
+        setSelectedCategory(event.target.value);
     };
     function onCategoryClick(id) {
-
         navigate(`category/${id}`);
     }
     return (
         <div>
-
-
             <FormControl sx={{ m: 1, minWidth: 120 }}>
                 <Select
                     value={categoria}
@@ -59,34 +54,7 @@ export default function GiftCategories() {
                 <Route path="/category/:id" element={<Gift/>} />
                 <Route path="/" element={<GiftCategories/>} />
             </Routes>
-
         </div >
-
     );
 }
 
-
-
-// import { render } from "react-dom";
-// import {
-//     BrowserRouter,
-//     Routes,
-//     Route
-//   } from "react-router-dom";
-  // import your route components too
-
-//   render(
-//     <BrowserRouter>
-//       <Routes>
-//         <Route path="/" element={<App />}>
-//           <Route index element={<Home />} />
-//           <Route path="teams" element={<Teams />}>
-//             <Route path=":teamId" element={<Team />} />
-//             <Route path="new" element={<NewTeamForm />} />
-//             <Route index element={<LeagueStandings />} />
-//           </Route>
-//         </Route>
-//       </Routes>
-//     </BrowserRouter>,
-//     document.getElementById("root")
-//   );

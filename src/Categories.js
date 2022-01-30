@@ -5,11 +5,10 @@ import Grid from '@mui/material/Grid';
 
 const Categories = () => {
     const [categories, setCategories] = useState([
-        { id: 1, name: 'Food', image: "./images/food" },
-        { id: 2, name: 'Attractions', image: "./images/Attractions" },
-        { id: 3, name: 'Gift Cards', image: "./images/Gift Cards" },
-        { id: 4, name: 'Toys', image: "./images/Toys" }
-
+        { id: 1, name: 'Food', image: "./images/food.jpg" },
+        { id: 2, name: 'Attractions', image: "./images/Attractions.jpg" },
+        { id: 3, name: 'Gift Cards', image: "./images/Gift Cards.png" },
+        { id: 4, name: 'Toys', image: "./images/Toys.jpg" }
     ]);
     return (<>
         <Box sx={{ flexGrow: 1, margin: 3 }}>

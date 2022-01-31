@@ -1,7 +1,7 @@
-import * as React from 'react';
+import React from 'react';
 import Button from '@mui/material/Button';
 
-const BuyGift = () => {
+const BuyGift = ({ info }) => {
    return (
       <Button variant="contained" disableElevation>
          Buy Gift

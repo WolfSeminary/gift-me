@@ -6,8 +6,11 @@ import GiftNote from "./GiftNote";
 import BuyGift from "./BuyGift";
 import { Grid } from "@mui/material";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const BuyGiftPage = () => {
+  const location = useLocation();
+  const gift = location.myGift;
   const [whoGetsTheGift, setWhoGetsTheGift] = useState("a friend");
   const [giftRecipient, setGiftRecipient] = useState();
   const [giftSender, setGiftSender] = useState();
@@ -46,7 +49,15 @@ const BuyGiftPage = () => {
         <GiftNote onChange={onGiftNoteChange} value={giftNote} />
       </Grid>
       <Grid item xs={12} justifyItems="center">
-        <BuyGift />
+        <BuyGift
+          info={{
+            ...gift,
+            whoGetsTheGift,
+            giftRecipient,
+            giftSender,
+            giftNote,
+          }}
+        />
       </Grid>
     </Grid>
   );

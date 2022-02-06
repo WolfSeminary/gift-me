@@ -34,6 +34,7 @@ const BuyGift = () => {
             aria-describedby="modal-modal-description">
             <Box sx={style}>
                <Typography id="modal-modal-title" variant="h6" component="h2">
+                  {/* Todo: send real data */}
                   <GiftPreview info={{id:2,name:"gift card", image: "./SSGP0149.JPG" }} />
                </Typography>
             </Box>

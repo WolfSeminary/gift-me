@@ -1,12 +1,12 @@
 import AppBar from './AppBar';
-import Breadcrumbs from './Breadcrumbs';
+import Navigation from './Navigation';
 import GiftDetailed from './GiftDetailed';
 
 const GiftPage = () => {
     return (
         <>
             <AppBar />
-            <Breadcrumbs />
+            <Navigation />
             <GiftDetailed />
         </>
     )

@@ -1,5 +1,7 @@
 import * as React from 'react';
+import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
+import FormHelperText from '@mui/material/FormHelperText';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Gift from './Gift';
@@ -8,10 +10,10 @@ import {
     Route,
     useNavigate
 } from "react-router-dom";
-
 export default function GiftCategories() {
     const [categoria, setCategoria] = React.useState('');
-    const [categories, setCategories] = React.useState([
+    const [selectedCategory, setSelectedCategory] = React.useState('');
+   const [categories, setCategories] = React.useState([
         { id: 1, name: 'Food' },
         { id: 2, name: 'Attractions' },
         { id: 3, name: 'Gift Cards' },
@@ -22,16 +24,14 @@ export default function GiftCategories() {
     let navigate = useNavigate();
     const handleChange = (event) => {
         setCategoria(event.target.value);
-
+    const onSelectedCategoryChange = (event) => {
+        setSelectedCategory(event.target.value);
     };
     function onCategoryClick(id) {
-
         navigate(`category/${id}`);
     }
     return (
         <div>
-
-
             <FormControl sx={{ m: 1, minWidth: 120 }}>
                 <Select
                     value={categoria}
@@ -51,12 +51,10 @@ export default function GiftCategories() {
                 </Select>
             </FormControl>
             <Routes>
-                <Route path="/category/:id" element={<Gift />} />
-                <Route path="/" element={<GiftCategories />} />
+                <Route path="/category/:id" element={<Gift/>} />
+                <Route path="/" element={<GiftCategories/>} />
             </Routes>
-
         </div >
-
     );
 }
 

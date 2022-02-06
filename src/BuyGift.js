@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { useState } from 'react';
 import GiftPreview from './GiftPreview';
 import Box from '@mui/material/Box';
@@ -17,7 +17,7 @@ const style = {
    boxShadow: 24,
    p: 4,
 };
-const BuyGift = () => {
+export default function BuyGift({ info }) {
    const [shouldShowPreview, setShouldShowPreview] = useState(false);
    const handleClose = () => setShouldShowPreview(false);
    function onBuyGiftClick() {
@@ -28,19 +28,17 @@ const BuyGift = () => {
          <Button variant="contained" disableElevation onClick={onBuyGiftClick}>
             Buy Gift
          </Button>
-        <Modal open={shouldShowPreview}
+         <Modal open={shouldShowPreview}
             onClose={handleClose}
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description">
             <Box sx={style}>
                <Typography id="modal-modal-title" variant="h6" component="h2">
                   {/* Todo: send real data */}
-                  <GiftPreview info={{id:2,name:"gift card", image: "./SSGP0149.JPG" }} />
+                  <GiftPreview info={{ id: 2, name: "gift card", image: "./SSGP0149.JPG" }} />
                </Typography>
             </Box>
          </Modal>
       </>
    )
 }
-
-export default BuyGift

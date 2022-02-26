@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { CardContent, Typography, CardMedia, Card } from '@mui/material';
 
 const GiftPreview = ({ info }) => {

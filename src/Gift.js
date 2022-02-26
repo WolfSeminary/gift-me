@@ -5,7 +5,6 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 
 const Gift = ({ myGift }) => {
-  console.log(myGift)
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
@@ -15,7 +14,6 @@ const Gift = ({ myGift }) => {
         alt="picture"
       />
       <CardContent>
-        <div></div>
         <Typography
           borderRadius="16%"
           sx={{ borderRadius: 16 }}

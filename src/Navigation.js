@@ -1,26 +1,22 @@
-
-import React from 'react';
-import Typography from '@mui/material/Typography';
-import Breadcrumbs from '@mui/material/Breadcrumbs';
-import { Route, Routes, Link } from "react-router-dom";
-import Categories from './Categories';
-import Gift from './Gift';
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Gifts from "./Gifts";
+import BuyGiftPage from "./BuyGiftPage";
+import GiftsPage from "./GiftsPage";
+import CategoriesPage from "./CategoriesPage";
+import HomePage from "./Homepage";
+import GiftPage from "./GiftPage";
 
 const Navigation = () => {
   return (
-    <Breadcrumbs aria-label="breadcrumb">
-      <Link underline="hover" color="inherit" to="categories">
-        categories
-      </Link>
-      <Link underline="hover" color="inherit" to="gifts">
-        gifts
-      </Link>
-      <Typography color="text.primary">gift{/*Replace with the gift name*/}</Typography>
-      <Routes>
-        <Route path="categories" element={<Categories />} />
-        <Route path="gifts" element={<Gift />} />
-      </Routes>
-    </Breadcrumbs>
-  )
-}
+    <Routes>
+      <Route path="" element={<HomePage />} />
+      <Route path="/categories" element={<CategoriesPage />} />
+      <Route path="/category/:categoryId" element={<GiftsPage />} />
+      <Route path="/buyGift" element={<BuyGiftPage />} />
+      <Route path="/gifts" element={<Gifts />} />
+      <Route path="/gift/:giftId" element={<GiftPage />} />
+    </Routes>
+  );
+};
 export default Navigation;

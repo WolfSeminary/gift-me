@@ -10,7 +10,7 @@ import { useLocation } from "react-router-dom";
 
 const BuyGiftPage = () => {
   const location = useLocation();
-  const gift = location.myGift;
+  const gift = location.state;
   const [whoGetsTheGift, setWhoGetsTheGift] = useState("a friend");
   const [giftRecipient, setGiftRecipient] = useState();
   const [giftSender, setGiftSender] = useState();
